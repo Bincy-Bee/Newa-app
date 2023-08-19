@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        @import url(../css/style.css);
+        @import url(../css/all.min.css);
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="main-box flex items-center justify-center h-screen">
+        <div class="formbox">
+            <form class="w[500px] border border-slate-400 p-4 rounded-xl" id="si-data">
+                <h3 class="text-3xl text-black text-center">Sign In</h3>
+
+                <label for="email">Email</label>
+                <input type="email"  id="email" placeholder="Enter email" class="text-black w-full border border-sky-500 rounded-md p-1 pl-2">
+                <p class="text-sm text-red-500 pl-2 mb-2">alert</p>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter paswword" class="text-black w-full border border-sky-500 rounded-md p-1 pl-2">
+                <p class="text-sm text-red-500 pl-2 mb-2">alert</p>
+
+                <div class="text-center mb-2 text-sm border border-sky-500 w-[50%] m-auto rounded-md">
+                    <select id="country">
+                        <option value="Select Country" selected>Select Country</option>
+                        <option value="IN">IN</option>
+                        <option value="CH">CH</option>
+                        <option value="NZ">NZ</option>
+                        <option value="US">US</option>
+                        <option value="UK">UK</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" id="sinform" value="Sign In" class="text-white py-1 px-2 bg-sky-500 rounded-md mt-1">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../js/cdn.tailwindcss.com_3.3.js"></script>
+<script src="../js/signin.js" type="module"></script>
+</html>
