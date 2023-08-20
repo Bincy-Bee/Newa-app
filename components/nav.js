@@ -11,9 +11,10 @@ const nav = ()=>{
                 <li><a href="../pages/worldnews.html" class="mx-1 p-1 text-black font-bold">World News</a></li>
             </ul>
         </nav>
-        <div class="btns">
-            <button class="p-1 px-2 mx-1 bg-sky-500 rounded-md text-white font-bold"><a href="../pages/signup.html">Sign Up</a></button>
-            <button class="p-1 px-2 mx-1 bg-sky-500 rounded-md text-white font-bold"><a href="../pages/signin.html">Sign In</a></button>
+        <div class="btns flex">
+            <a href="../pages/signup.html" id="signup" class="p-1 px-2 mx-1 bg-sky-500 rounded-md text-white font-bold">Sign Up</a>
+            <a href="../pages/signin.html" id="signin" class="p-1 px-2 mx-1 bg-sky-500 rounded-md text-white font-bold">Sign In</a>
+            <a href="" id="signout" class="p-1 px-2 mx-1 bg-sky-500 rounded-md text-white font-bold">Sign Out</a>
         </div>
     </div>
 </header>`

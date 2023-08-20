@@ -44,3 +44,12 @@
 #newspage div p{
     text-align: justify;
 }
+#signout{
+    display: none;
+}
+#signin{
+    display: block;
+}
+#signup{
+    display: block;
+}

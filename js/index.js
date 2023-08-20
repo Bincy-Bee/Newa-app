@@ -27,12 +27,22 @@ const userdata=(data)=>{
 };
 if (login){        
     userdata(user);
+    document.getElementById("signin").style.display="none";
+    document.getElementById("signup").style.display="none";
+    document.getElementById("signout").style.display="block";
 }
 else{
     alert("please signin 1st")
 }
  
-        
+document.getElementById("signout").addEventListener("click",(e)=>{
+    e.preventDefault();
+    
+    document.getElementById("signin").style.display="block";
+    document.getElementById("signup").style.display="block";
+    document.getElementById("signout").style.display="none";
+    sessionStorage.removeItem("userlogedin");
+})
        
        
 

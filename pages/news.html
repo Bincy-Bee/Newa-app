@@ -10,10 +10,27 @@
 </head>
 <body>
     <div id="navbar"></div>
+    <div class="btns flex flex-wrap justify-between items-center p-1 border">
+        <div class="serc">
+            <input type="text" id="s-input" class="text-black border border-sky-500 rounded-md p-1 pl-2" placeholder="Search Somthing">
+            <button id="search" class="p-1 px-2 mx-1 bg-sky-500 rounded-md text-white font-bold">Search</button>
+        </div>
+        <div class="mb-2 text-sm  w-[10%] ">
+            <select id="country" class="p-1 text-slate-400 border border-sky-500 rounded-md">
+                <option value="Select Country" selected>Select Country</option>
+                <option value="All">All</option>
+                <option value="in">IN</option>
+                <option value="ch">CH</option>
+                <option value="nz">NZ</option>
+                <option value="us">US</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
+    </div>
     <div class="main-box w-full flex flex-wrap">
         <div class="box1 w-[10%] h-screen">
             <div id="userdata">
-                <h1>bhavin news</h1>
+
             </div>
         </div>
         <div class="box2 w-[90%] overflow-scroll">
@@ -25,5 +42,6 @@
     
 </body>
 <script src="../js/cdn.tailwindcss.com_3.3.js"></script>
+<script src="../js/index.js"></script>
 <script src="../js/news.js" type="module"></script>
 </html>
