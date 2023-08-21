@@ -1,5 +1,5 @@
 let login = localStorage.getItem("logedIn");
-let user = JSON.parse(sessionStorage.getItem("userlogedin"));
+let user = JSON.parse(localStorage.getItem("userlogedin"));
 console.log(login);
 console.log(user);
 
@@ -41,7 +41,7 @@ document.getElementById("signout").addEventListener("click",(e)=>{
     document.getElementById("signin").style.display="block";
     document.getElementById("signup").style.display="block";
     document.getElementById("signout").style.display="none";
-    sessionStorage.removeItem("userlogedin");
+    localStorage.removeItem("userlogedin");
 })
        
        

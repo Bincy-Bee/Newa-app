@@ -23,7 +23,7 @@ document.getElementById("si-data").addEventListener("submit",(e)=>{
                     window.location.href="/index.html";
                 },1000)
                 localStorage.setItem("logedIn", true);
-                sessionStorage.setItem("userlogedin", JSON.stringify(data));    
+                localStorage.setItem("userlogedin", JSON.stringify(data));    
             }
         }
         else{
