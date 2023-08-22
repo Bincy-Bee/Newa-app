@@ -32,17 +32,27 @@ if (login){
     document.getElementById("signout").style.display="block";
 }
 else{
-    alert("please signin 1st")
+    alert("please signin 1st");
 }
- 
-document.getElementById("signout").addEventListener("click",(e)=>{
+
+const signout = (e)=>{
     e.preventDefault();
-    
     document.getElementById("signin").style.display="block";
     document.getElementById("signup").style.display="block";
     document.getElementById("signout").style.display="none";
     localStorage.removeItem("userlogedin");
-})
+    localStorage.removeItem("logedIn");
+    document.getElementById("userdata").innerHTML="";
+}
+document.getElementById("signout").addEventListener("click",signout)
+// document.getElementById("signout").addEventListener("click",(e)=>{
+//     e.preventDefault();
+    
+//     document.getElementById("signin").style.display="block";
+//     document.getElementById("signup").style.display="block";
+//     document.getElementById("signout").style.display="none";
+//     localStorage.removeItem("userlogedin");
+// })
        
        
 

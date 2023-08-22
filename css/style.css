@@ -53,3 +53,26 @@
 #signup{
     display: block;
 }
+#worldnewspage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+#worldnewspage div{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+#worldnewspage div img{
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+}
+#worldnewspage div h3{
+    font-weight: bold;
+}
+#worldnewspage div p{
+    text-align: justify;
+}

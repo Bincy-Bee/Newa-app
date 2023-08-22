@@ -6,28 +6,6 @@ let login = localStorage.getItem("logedIn");
 let user = JSON.parse(localStorage.getItem("userlogedin"));
 console.log(user);
 
-const newsdata=(data) => {
-    document.getElementById("newspage").innerHTML="";
-    data.map((ele)=>{
-
-        let img = document.createElement("img");
-        img.src = ele.image;
-
-        let title = document.createElement("h3");
-        title.innerHTML = ele.title;
-
-        let desh =  document.createElement("h3");
-        desh.innerHTML = ele.country;
-
-        let desc = document.createElement("p");
-        desc.innerHTML = ele.description;
-
-        let div = document.createElement("div");
-
-        div.append(img, title, desh, desc);
-        document.getElementById("newspage").append(div);
-    })
-};
 const userdata=(data)=>{
     console.log(data);
     data.map((ele)=>{
@@ -51,15 +29,6 @@ const userdata=(data)=>{
     })
 };
 
-fetch(`http://localhost:8090/news`)
-.then((res)=>res.json())
-.then((data)=>{
-
-    let feel = data.filter((item)=> item.country == user[0].country.toLowerCase())
-    console.log(feel);
-    newsdata(feel);
-})
-
 if (login){        
     userdata(user);
     document.getElementById("signin").style.display="none";
@@ -71,12 +40,46 @@ else{
 }
 document.getElementById("signout").addEventListener("click",(e)=>{
     e.preventDefault();
+  
     localStorage.removeItem("userlogedin");
+    localStorage.removeItem("logedIn");
     document.getElementById("signin").style.display="block";
     document.getElementById("signup").style.display="block";
     document.getElementById("signout").style.display="none";
+    document.getElementById("userdata").innerHTML="";
 });
- 
+
+const newsdata=(data) => {
+    document.getElementById("newspage").innerHTML="";
+    data.map((ele)=>{
+
+        let img = document.createElement("img");
+        img.src = ele.image;
+
+        let title = document.createElement("h3");
+        title.innerHTML = ele.title;
+
+        let desh =  document.createElement("h3");
+        desh.innerHTML = ele.country;
+
+        let desc = document.createElement("p");
+        desc.innerHTML = ele.description;
+
+        let div = document.createElement("div");
+
+        div.append(img, title, desh, desc);
+        document.getElementById("newspage").append(div);
+    })
+};
+
+fetch(`http://localhost:8090/news`)
+.then((res)=>res.json())
+.then((data)=>{
+
+    let feel = data.filter((item)=> item.country == user[0].country.toLowerCase())
+    console.log(feel);
+    newsdata(feel);
+})
 
 const handlecountry = (val) =>{
 
@@ -101,9 +104,6 @@ const handlecountry = (val) =>{
             }
         })
     }
-    
-   
-
 }
 
 document.getElementById("country").addEventListener("change",()=> handlecountry("all"));
